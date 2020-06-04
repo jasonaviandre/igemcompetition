@@ -1,0 +1,238 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(45deg,#4ADEDE,#1CA7EC,#787FF6);
+    background-size: 400%;
+    animation: bg-animation 5s infinite alternate;
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    } 100% {
+        background-position: right;
+    }
+}
+
+
+
+header {
+    background: url(/images/SVG/background_new6.svg) no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.container{
+    position: fixed;
+    width: 100vw;
+    height: 70px;
+    background: transparent;
+    transition: background 250ms ease-in;
+}
+
+.container-scrolled{
+    background-color: #fff;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0, 0.25);
+    z-index: 1000;
+}
+
+
+
+.logo {
+    float: left;
+    color: #333;
+    padding-left: 20px;
+    /* padding-top: 10px; */
+    margin-top: 5px;
+}
+
+.logo a img {
+    width: 80px;
+    height: 80px;
+    transition: all 250ms ease;
+}
+
+.container.container-scrolled .logo a img{
+    width: 60px;
+    height: 60px;
+}
+
+nav {
+    position: absolute;
+    /* float: right; */
+    right: 5%;
+    /* padding-top: 5px; */
+    padding-bottom: 10px;
+    /* transform: translateX(-25%); */
+}
+
+ 
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+
+nav ul ul{
+    position: absolute;
+    height: 10px;
+    margin: 0px;
+    margin-right: 50px;
+    margin-top: 10px;
+    padding: 0px;
+    padding-top: 30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 250ms ease;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+nav ul li:hover > ul{
+    opacity: 0.8;
+    visibility: visible;
+}
+
+nav ul ul li{
+    position: relative;
+    width: 150px;
+    margin: 0px;
+    padding-left: 5px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    float: none;
+    display: block;
+    background-color: #fff;
+}
+
+nav ul ul li a{
+    opacity: 1;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+
+.highlight a{
+    position: relative;
+    text-decoration: none;
+    color: #10769e;
+}
+
+
+.highlight a::after {
+    content: '';
+    width: 0%;
+    height: 1px;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    background-color: #10769e;
+    border-radius: 10px;
+    transition: all 300ms ease;
+}
+
+
+.highlight a:hover::after {
+    animation: aaa 0.3s 1;
+    left: 0%;
+    width: 100%;
+}
+
+@keyframes aaa{
+    0%{
+        left: 0%;
+        width: 0%;
+    }100%{
+        left: 0%;
+        width: 100%;
+    }
+}
+
+.showcase {
+    position: relative;
+    top: 40%;
+    left: 15%;
+    color: #10769e;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.showcase h1 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: 4.5rem;
+}
+
+.showcase p {
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 1.5rem;
+    color: rgb(187, 187, 187);
+}
+
+.showcase img{
+    float: right;
+}
+
+.showcase .images .fish{
+    position: absolute;
+    left: 35%;
+    bottom: 60%;
+}
+
+.showcase .images .jellyfish{
+    position: absolute;
+    left: 60%;
+    bottom: 30%;
+    z-index: -10;
+}
+
+.showcase .images .seaweed{
+    position: absolute;
+    left: 28%;
+    top: 95%;
+}
+
+.scroll {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    color: rgb(187, 187, 187);
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.scroll img{
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+}
+
+section{
+    height: 100vh;
+    color: #333;
+    background: white;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+section h1{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
